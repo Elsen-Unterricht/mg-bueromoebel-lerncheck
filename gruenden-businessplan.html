@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Digitale Lernaufgaben zur Einzelunternehmensgründung mit dem Modellfall Mira und der MG Büromöbel AG.">
+<meta name="theme-color" content="#173d5b">
+<title>Businessplan und Gewerbeanmeldung · MG Büromöbel AG</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#183247;background:#eff4f7;--navy:#173d5b;--blue:#176b9c;--mint:#e5f4ed;--line:#d9e4ea;--muted:#526a7b}*{box-sizing:border-box}body{margin:0;line-height:1.55}header{background:linear-gradient(120deg,#173d5b,#226d91);color:white;padding:32px 18px 36px}.hero,main{max-width:960px;margin:auto}.eyebrow{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;color:#c5e4ed}.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.12;margin:9px 0}.hero p{font-size:1.05rem;margin:0;color:#e2eff5}.badge{display:inline-block;margin-top:16px;border:1px solid #a9cbd8;border-radius:999px;padding:5px 12px;font-size:.88rem}main{padding:22px 18px 44px}.panel,.station{background:white;border:1px solid #e0e8ed;border-radius:15px;padding:21px;margin:16px 0;box-shadow:0 5px 20px #17384c0a}.panel p:first-child{margin-top:0}.case{background:#f4f8fa;border-radius:10px;padding:14px 16px}.nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.nav a{color:#15577d;background:#e9f3f8;padding:7px 11px;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:650}.nav a:hover{text-decoration:underline}.station h2{margin:0;color:var(--navy);font-size:1.35rem}.lead{color:var(--muted);margin:5px 0 13px}.q{margin:11px 0;padding:13px 14px;background:#f6f9fa;border:1px solid #e5edf1;border-radius:10px}.q label.prompt{display:block;font-weight:650;margin-bottom:6px}.q select{width:100%;font:inherit;padding:9px;border:1px solid #a8bbc6;border-radius:8px;background:white;color:#183247}.q label.choice{display:block;font-weight:400;margin:6px 0}.q input{accent-color:var(--blue);margin-right:7px}.hint{min-height:1.4em;margin-top:4px;color:#536b7b;font-size:.92rem}.correct{color:#137347;font-weight:700}.wrong{color:#a33b2b;font-weight:700}button{font:inherit;font-weight:650;border:0;border-radius:8px;background:var(--blue);color:#fff;padding:10px 15px;margin:7px 7px 0 0;cursor:pointer}button:hover{background:#12547d}button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #e5b756;outline-offset:2px}.feedback{font-weight:700;margin-top:10px;min-height:1.4em}.score{background:var(--mint);border-radius:10px;padding:14px 16px}.score h2{margin:0 0 6px;color:var(--navy)}textarea{width:100%;min-height:150px;font:inherit;padding:11px;border:1px solid #a8bbc6;border-radius:8px;resize:vertical}.small{font-size:.92rem;color:var(--muted)}.checklist li{margin:4px 0}footer{text-align:center;padding:12px 18px 26px;color:#617789;font-size:.9rem}footer a{color:#15577d}@media(max-width:520px){header{padding:25px 16px 29px}.station,.panel{padding:16px}main{padding-inline:13px}}
+body[data-topic="person"] #s2,body[data-topic="person"] #s3,body[data-topic="person"] #empfehlung,body[data-topic="person"] #rechtsHinweis{display:none}
+body[data-topic="person"] #stellenBlock{display:none}
+body[data-topic="idee"] #s1,body[data-topic="idee"] #s3,body[data-topic="idee"] #s4,body[data-topic="idee"] #empfehlung,body[data-topic="idee"] #rechtsHinweis{display:none}
+body[data-topic="businessplan"] #s1,body[data-topic="businessplan"] #s2,body[data-topic="businessplan"] #rechtsHinweis{display:none}
+body[data-topic="businessplan"] #decisionBlock{display:none}
+.q textarea{min-height:80px}
+</style>
+</head>
+<body data-topic="businessplan">
+<header><div class="hero"><div class="eyebrow">Wirtschaft · Handlungsfeld 1</div><h1>Businessplan und Gewerbeanmeldung</h1><p>Lernaufgabe: Ein Einzelunternehmen gründen · Teil 3 von 3 · Lückentext und Zuordnungen</p><span class="badge">Modellfall Mira · MG Büromöbel AG</span></div></header>
+<main>
+<section class="panel"><p><strong>Dein Auftrag:</strong> Ergänze den Lückentext zum Businessplan. Ordne Meldestellen zu und prüfe, wo Mira bei der Einstellung einer Mitarbeiterin selbst aktiv werden muss.</p><nav class="nav" aria-label="Unterthemen"><a href="#s3">Businessplan ergänzen</a><a href="#s4">Gewerbe anmelden</a><a href="#empfehlung">Empfehlung schreiben</a></nav><p class="small">Deine Antworten werden nur auf diesem Gerät ausgewertet. Es werden keine Ergebnisse übertragen oder gespeichert.</p></section>
+<section class="station" id="s1"><h2>Station 1 · Die Gründerperson</h2><p class="lead">Unterscheide persönliche Voraussetzungen (Eigenschaften) von fachlichen Voraussetzungen (Wissen und Können).</p><div id="personal"></div><div id="personalFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkPersonal()">Zuordnungen prüfen</button><div id="fachlich"></div><div id="fachlichFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkFachlich()">Fachwissen prüfen</button></section>
+<section class="station" id="s2"><h2>Station 2 · Selbstständigkeit und Geschäftsidee beurteilen</h2><p class="lead">Ordne die Aussagen ein. Bei Chancen und Risiken beurteilst du Miras konkrete Geschäftsidee.</p><div id="abwägen"></div><div id="abwFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkAbwaegen()">Einordnung prüfen</button><div class="q"><label class="prompt" for="nachteil">Welcher Nachteil der Selbstständigkeit wäre für dich am schwersten? Begründe kurz.</label><textarea id="nachteil" placeholder="Für mich wäre … besonders schwierig, weil …"></textarea><p class="small">Diese persönliche Antwort wird nicht automatisch bewertet und bleibt auf deinem Gerät.</p></div></section>
+<section class="station" id="s3"><h2>Station 1 · Der Businessplan</h2><p class="lead">Ergänze die Aussagen mit den passenden Begriffen. Jeder Begriff wird einmal verwendet.</p><div id="business"></div><div id="businessFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkBusiness()">Lückentext prüfen</button></section>
+<section class="station" id="s4"><h2>Station 2 · Gewerbeanmeldung und Mitarbeitende</h2><p class="lead">Ordne die Stellen zu, die über die Anmeldung informiert werden. Prüfe danach, welche Anmeldungen Mira bei ihrer ersten Mitarbeiterin selbst vornehmen muss.</p><div id="stellenBlock"><div id="stellen"></div><div id="stellenFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkStellen()">Meldestellen prüfen</button><div class="subhead">Mitarbeiterin einstellen</div><p>Nach einem halben Jahr stellt Mira ihre erste Mitarbeiterin ein. Wo muss sie selbst aktiv werden?</p><div id="mitarbeiter"></div><div id="mitarbeiterFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkMitarbeiter()">Zuordnungen prüfen</button></div><div id="decisionBlock"><div id="entscheidungen"></div><div id="decisionFeedback" class="feedback" aria-live="polite"></div><button type="button" onclick="checkDecisions()">Entscheidungen prüfen</button></div></section>
+<section class="station" id="empfehlung"><h2>Zum Abschluss · Was rätst du Mira?</h2><p class="lead">Schreibe eine kurze Empfehlung mit 6 bis 8 Sätzen. Nutze die Stichpunkte als Selbstkontrolle; diese Aufgabe wird nicht automatisch bewertet.</p><ul class="checklist"><li>Nenne zwei passende Stärken von Mira.</li><li>Erkläre ein Risiko ihrer Geschäftsidee.</li><li>Gib einen konkreten Tipp für den Businessplan.</li><li>Sprich eine begründete Empfehlung aus.</li></ul><label for="mail"><strong>Deine Empfehlung:</strong></label><textarea id="mail" placeholder="Hallo Mira, ..."></textarea><p class="small">Hinweis: Der Text bleibt auf deinem Gerät und wird nicht versendet.</p></section>
+<section class="panel score" aria-live="polite"><h2>Dein Lernstand</h2><div id="total">Prüfe die Übungen, um deinen Zwischenstand zu sehen.</div><button type="button" class="secondary" onclick="location.reload()">Übungen zurücksetzen</button></section>
+<section class="panel" id="rechtsHinweis"><strong>Hinweis zum Rechtsstand:</strong> Die Station zur Gewerbeanmeldung folgt der Darstellung in deiner Lernaufgabe. In der Praxis kann die Weiterleitung je nach Tätigkeit, Rechtsform und zuständiger Behörde variieren. Wer Beschäftigte einstellt, muss außerdem die aktuellen Meldewege für Betriebsnummer und Sozialversicherung beachten. <a href="https://www.gesetze-im-internet.de/gewo/__14.html" target="_blank" rel="noopener">§ 14 Gewerbeordnung</a> · <a href="https://www.arbeitsagentur.de/unternehmen/betriebsnummern-service/alles-wichtige" target="_blank" rel="noopener">Bundesagentur für Arbeit: Betriebsnummer und Sozialversicherung</a>.</section>
+</main>
+<footer>Fiktives Modellunternehmen MG Büromöbel AG · Unterrichtsmaterial · <a href="./gruenden.html">Zur Übersicht der Unterthemen</a></footer>
+<script>
+const scores={};
+const personal=[
+ ['Risikobereitschaft','Mira kündigt ihre sichere Stelle, obwohl sie noch nicht weiß, ob ihr Geschäft gut läuft.'],
+ ['Durchhaltevermögen','Nach drei Monaten mit wenigen Kunden gibt Mira nicht auf und verbessert ihre Werbung.'],
+ ['Belastbarkeit','Vor einer großen Lieferung arbeitet Mira zwei Wochen lang zwölf Stunden am Tag und bleibt ruhig.'],
+ ['Entscheidungsfähigkeit','Mira vergleicht zwei Stoffangebote und entscheidet sich noch am selben Tag.'],
+ ['Kommunikationsfähigkeit','Mira überzeugt die Bank in einem Beratungsgespräch von ihrer Idee.'],
+ ['Kritikfähigkeit','Ein Kunde bemängelt eine schiefe Naht. Mira hört zu und verbessert ihre Arbeit.']
+];
+const fachlich=[
+ ['Miras Berufsausbildung','Ausbildung zur Industriekauffrau'],
+ ['Miras Berufserfahrung','Zwei Jahre im Verkauf der MG Büromöbel AG'],
+ ['Miras handwerkliches Können','Mithilfe in der Polsterei ihrer Mutter']
+];
+const abwaegen=[
+ ['Mira kann eigene Ideen umsetzen.','Vorteil'],
+ ['Am Anfang ist ihr monatliches Einkommen unsicher.','Nachteil'],
+ ['Mira kann ihre Arbeitszeit selbst einteilen.','Vorteil'],
+ ['Bei einem schlechten Geschäftsverlauf kann sie Erspartes verlieren.','Nachteil'],
+ ['Läuft das Geschäft gut, kann Mira mehr verdienen als im Verkauf.','Vorteil'],
+ ['Sie ist selbst für ihre Altersvorsorge und Krankenversicherung verantwortlich.','Nachteil'],
+ ['Mira arbeitet oft abends und am Wochenende.','Nachteil'],
+ ['Sie kann stolz darauf sein, etwas Eigenes aufzubauen.','Vorteil'],
+ ['Nachhaltigkeit ist gefragt; viele Firmen möchten Ressourcen schonen.','Chance'],
+ ['Gebrauchte Qualitätsmöbel sind für Start-ups und Praxen oft günstiger als neue Möbel.','Chance'],
+ ['Die MG Büromöbel AG würde Mira zurückgenommene Möbel günstig überlassen.','Chance'],
+ ['Mira kennt die Branche und ihre Kundinnen und Kunden.','Chance'],
+ ['Online-Händler und Möbelbörsen bieten ähnliche Produkte an.','Risiko'],
+ ['Mira findet möglicherweise nicht genug gebrauchte Möbel zum Aufarbeiten.','Risiko'],
+ ['In schlechten Zeiten sparen Firmen bei der Einrichtung.','Risiko'],
+ ['Das Aufarbeiten dauert lange; eine Garantie kann zusätzliche Kosten verursachen.','Risiko']
+];
+const terms=['Plan','Bank','Erfahrung','Angebot','Nutzen','Konkurrenz','Zielgruppe','Preis','Werbung','Rechtsform','Finanzplan','Kapitalbedarf','Eigenkapital','Kredit'];
+const business=[
+ ['Ein Businessplan ist ein schriftlicher ___ für die Gründung.','Plan'],
+ ['Er ist eine wichtige Unterlage für das Gespräch mit der ___.','Bank'],
+ ['Die Gründerperson stellt Ausbildung und ___ vor.','Erfahrung'],
+ ['Die Geschäftsidee beschreibt das ___, das verkauft wird.','Angebot'],
+ ['Sie erklärt auch den ___ für die Kundinnen und Kunden.','Nutzen'],
+ ['Bei der Marktanalyse prüft Mira die ___.','Konkurrenz'],
+ ['Die ___ beschreibt, wer kaufen soll.','Zielgruppe'],
+ ['Zum Marketing gehören unter anderem der ___ und die Werbung.','Preis'],
+ ['Mit ___ macht Mira ihr Angebot bekannt.','Werbung'],
+ ['Der Businessplan beschreibt auch die ___.','Rechtsform'],
+ ['Der ___ zeigt Kosten, Umsatz und Gewinn.','Finanzplan'],
+ ['Der gesamte Geldbedarf für die Gründung heißt ___.','Kapitalbedarf'],
+ ['Miras eigenes Geld ist ihr ___.','Eigenkapital'],
+ ['Geliehenes Geld von der Bank ist zum Beispiel ein ___.','Kredit']
+];
+const stellen=[
+ ['Finanzamt','Ja'],['Industrie- und Handelskammer (IHK)','Ja'],['Berufsgenossenschaft','Ja'],['Statistisches Landesamt','Ja'],['Gewerbeaufsicht / Amt für Arbeitsschutz','Ja'],['Kfz-Zulassungsstelle','Nein'],['Krankenkasse bei der Gewerbeanmeldung','Nein']
+];
+const employeeQuestions=[['Betriebsnummer für den Betrieb beantragen','Bundesagentur für Arbeit'],['Mitarbeiterin zur Sozialversicherung anmelden','Krankenkasse der Mitarbeiterin']];
+const decisions=[
+ ['Ein Großkunde bestellt 60 Stühle in zwei Wochen; Mira schafft nur 35.','Mira nennt ehrlich eine mögliche Lieferzeit oder bietet eine Teillieferung an.',['Mira sagt zu und hofft, dass es klappt.','Mira nennt eine machbare Lieferzeit oder bietet eine Teillieferung an.'],1],
+ ['Ein neuer Anbieter verkauft gebrauchte Büromöbel deutlich günstiger.','Mira prüft das Angebot und zeigt ihre Stärken wie Garantie, Aufbau und Beratung.',['Mira halbiert sofort ihre Preise.','Mira prüft den Wettbewerb und zeigt ihre Stärken.','Mira wartet ab.'],1],
+ ['Ein Lieferant bietet Rabatt, wenn Mira Stoff für ein ganzes Jahr kauft; ihr Konto ist knapp.','Mira rechnet nach, ob sie danach noch ihre Rechnungen bezahlen kann.',['Mira kauft sofort, denn Rabatt lohnt sich immer.','Mira prüft Kosten und Zahlungsfähigkeit.'],1],
+ ['Mira arbeitet 70 Stunden pro Woche und schafft die Buchhaltung abends.','Mira gibt die Buchhaltung an ein Steuerbüro ab und gewinnt Zeit für Kunden.',['Mira arbeitet noch mehr.','Mira delegiert die Buchhaltung und nutzt die Zeit für Kunden.'],1]
+];
+function selectRow(label,values,id){return `<div class="q"><label class="prompt" for="${id}">${label}</label><select id="${id}"><option value="">Bitte auswählen</option>${values.map(v=>`<option>${v}</option>`).join('')}</select><div id="${id}f" class="hint"></div></div>`}
+function render(){
+ document.getElementById('personal').innerHTML='<h3>Persönliche Voraussetzungen</h3>'+personal.map((p,i)=>selectRow(p[0],personal.map(x=>x[1]),'p'+i)).join('');
+ document.getElementById('fachlich').innerHTML='<h3>Fachliche Voraussetzungen</h3>'+fachlich.map((p,i)=>selectRow(p[0],fachlich.map(x=>x[1]),'f'+i)).join('');
+ document.getElementById('abwägen').innerHTML=abwaegen.map((p,i)=>selectRow(p[0],['Vorteil','Nachteil','Chance','Risiko'],'a'+i)).join('');
+ document.getElementById('business').innerHTML=business.map((p,i)=>selectRow(p[0],terms,'b'+i)).join('');
+ document.getElementById('stellen').innerHTML=stellen.map((p,i)=>selectRow(p[0],['Ja','Nein'],'st'+i)).join('');
+ document.getElementById('mitarbeiter').innerHTML=employeeQuestions.map((p,i)=>selectRow(p[0],['Bundesagentur für Arbeit','Krankenkasse der Mitarbeiterin'],'mit'+i)).join('');
+ document.getElementById('entscheidungen').innerHTML='<h3>Was sollte Mira tun?</h3>'+decisions.map((p,i)=>`<fieldset class="q"><legend class="prompt">${i+1}. ${p[0]}</legend>${p[2].map((answer,j)=>`<label class="choice"><input type="radio" name="d${i}" value="${j}"> ${answer}</label>`).join('')}<div id="d${i}f" class="hint"></div></fieldset>`).join('');
+}
+function mark(id,ok,solution){document.getElementById(id).innerHTML=ok?'<span class="correct">✓ Richtig</span>':`<span class="wrong">✗ Noch einmal überlegen.</span> Lösung: ${solution}`}
+function checkSelectGroup(data,prefix,key,feedbackId){let n=0;data.forEach((pair,i)=>{const ok=document.getElementById(prefix+i).value===pair[1];n+=+ok;mark(prefix+i+'f',ok,pair[1])});scores[key]=n;document.getElementById(feedbackId).textContent=`${n} von ${data.length} richtig.`;updateTotal()}
+function checkPersonal(){checkSelectGroup(personal,'p','personal','personalFeedback')}
+function checkFachlich(){checkSelectGroup(fachlich,'f','fachlich','fachlichFeedback')}
+function checkAbwaegen(){checkSelectGroup(abwaegen,'a','abwägen','abwFeedback')}
+function checkBusiness(){checkSelectGroup(business,'b','business','businessFeedback')}
+function checkStellen(){checkSelectGroup(stellen,'st','stellen','stellenFeedback')}
+function checkMitarbeiter(){checkSelectGroup(employeeQuestions,'mit','mitarbeiter','mitarbeiterFeedback')}
+function checkDecisions(){let n=0;decisions.forEach((d,i)=>{const selected=document.querySelector(`input[name="d${i}"]:checked`);const ok=!!selected&&Number(selected.value)===d[3];n+=+ok;mark(`d${i}f`,ok,d[1])});scores.decisions=n;document.getElementById('decisionFeedback').textContent=`${n} von ${decisions.length} richtig.`;updateTotal()}
+const scoreWeights={personal:6,fachlich:3,'abwägen':16,business:14,stellen:7,mitarbeiter:2,decisions:4};
+const topicScores={person:['personal','fachlich','decisions'],idee:['abwägen'],businessplan:['business','stellen','mitarbeiter']};
+function updateTotal(){const allowed=topicScores[document.body.dataset.topic]||Object.keys(scoreWeights);const done=allowed.filter(k=>Object.prototype.hasOwnProperty.call(scores,k));if(!done.length)return;const total=done.reduce((a,k)=>a+scores[k],0);const max=allowed.reduce((a,k)=>a+scoreWeights[k],0);document.getElementById('total').textContent=`Zwischenstand: ${total} von ${max} geprüften Aufgaben richtig. Geprüfte Bereiche: ${done.length} von ${allowed.length}. Du kannst Antworten verbessern und erneut prüfen.`}
+render();
+</script>
+</body></html>
+
