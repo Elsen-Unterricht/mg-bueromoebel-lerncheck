@@ -17,6 +17,7 @@ main{padding:22px 18px 42px}.panel,.station{background:white;border:1px solid #e
 <section class="panel score" aria-live="polite"><h2>Dein Lernstand</h2><div id="scoreText">Starte die Stationen und prüfe deine Antworten.</div><button type="button" class="secondary" onclick="location.reload()">Übungen zurücksetzen</button></section></main>
 <footer>Fiktives Modellunternehmen MG Büromöbel AG · <a href="./gruenden-teil2.html">Zur Übersicht</a> · <a href="./">Zu allen Lernaufgaben</a></footer>
 <script>
+const scores={};
 const categories=['Istkaufmann/-frau','Kannkaufmann/-frau','Formkaufmann','Noch kein Kaufmann nach HGB'];
 const cases=[
 {t:'Mira Yilmaz',d:'7 Beschäftigte, 780.000 € geplanter Umsatz, rund 150 Firmenkunden mit Verkauf auf Rechnung.',a:0,w:'Art und Umfang erfordern eine kaufmännische Einrichtung. Mira ist Istkauffrau nach § 1 HGB.'},
