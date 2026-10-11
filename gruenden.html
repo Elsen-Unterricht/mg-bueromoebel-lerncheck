@@ -71,10 +71,10 @@ const stellen=[
  ['Finanzamt','Ja'],['Industrie- und Handelskammer (IHK)','Ja'],['Berufsgenossenschaft','Ja'],['Statistisches Landesamt','Ja'],['Gewerbeaufsicht / Amt für Arbeitsschutz','Ja'],['Kfz-Zulassungsstelle','Nein'],['Krankenkasse bei der Gewerbeanmeldung','Nein']
 ];
 const decisions=[
- ['Ein Großkunde bestellt 60 Stühle in zwei Wochen; Mira schafft nur 35.','Mira nennt ehrlich eine mögliche Lieferzeit oder bietet eine Teillieferung an.',['Mira sagt zu und hofft, dass es klappt.','Mira nennt eine machbare Lieferzeit oder bietet eine Teillieferung an.']],
- ['Ein neuer Anbieter verkauft gebrauchte Büromöbel deutlich günstiger.','Mira prüft das Angebot und zeigt ihre Stärken wie Garantie, Aufbau und Beratung.',['Mira halbiert sofort ihre Preise.','Mira prüft den Wettbewerb und zeigt ihre Stärken.','Mira wartet ab.']],
- ['Ein Lieferant bietet Rabatt, wenn Mira Stoff für ein ganzes Jahr kauft; ihr Konto ist knapp.','Mira rechnet nach, ob sie danach noch ihre Rechnungen bezahlen kann.',['Mira kauft sofort, denn Rabatt lohnt sich immer.','Mira prüft Kosten und Zahlungsfähigkeit.']],
- ['Mira arbeitet 70 Stunden pro Woche und schafft die Buchhaltung abends.','Mira gibt die Buchhaltung an ein Steuerbüro ab und gewinnt Zeit für Kunden.',['Mira arbeitet noch mehr.','Mira delegiert die Buchhaltung und nutzt die Zeit für Kunden.']]
+ ['Ein Großkunde bestellt 60 Stühle in zwei Wochen; Mira schafft nur 35.','Mira nennt ehrlich eine mögliche Lieferzeit oder bietet eine Teillieferung an.',['Mira sagt zu und hofft, dass es klappt.','Mira nennt eine machbare Lieferzeit oder bietet eine Teillieferung an.'],1],
+ ['Ein neuer Anbieter verkauft gebrauchte Büromöbel deutlich günstiger.','Mira prüft das Angebot und zeigt ihre Stärken wie Garantie, Aufbau und Beratung.',['Mira halbiert sofort ihre Preise.','Mira prüft den Wettbewerb und zeigt ihre Stärken.','Mira wartet ab.'],1],
+ ['Ein Lieferant bietet Rabatt, wenn Mira Stoff für ein ganzes Jahr kauft; ihr Konto ist knapp.','Mira rechnet nach, ob sie danach noch ihre Rechnungen bezahlen kann.',['Mira kauft sofort, denn Rabatt lohnt sich immer.','Mira prüft Kosten und Zahlungsfähigkeit.'],1],
+ ['Mira arbeitet 70 Stunden pro Woche und schafft die Buchhaltung abends.','Mira gibt die Buchhaltung an ein Steuerbüro ab und gewinnt Zeit für Kunden.',['Mira arbeitet noch mehr.','Mira delegiert die Buchhaltung und nutzt die Zeit für Kunden.'],1]
 ];
 function selectRow(label,values,id){return `<div class="q"><label class="prompt" for="${id}">${label}</label><select id="${id}"><option value="">Bitte auswählen</option>${values.map(v=>`<option>${v}</option>`).join('')}</select><div id="${id}f" class="hint"></div></div>`}
 function render(){
@@ -92,7 +92,7 @@ function checkFachlich(){checkSelectGroup(fachlich,'f','fachlich','fachlichFeedb
 function checkAbwaegen(){checkSelectGroup(abwaegen,'a','abwägen','abwFeedback')}
 function checkBusiness(){checkSelectGroup(business,'b','business','businessFeedback')}
 function checkStellen(){checkSelectGroup(stellen,'st','stellen','stellenFeedback')}
-function checkDecisions(){let n=0;decisions.forEach((d,i)=>{const selected=document.querySelector(`input[name="d${i}"]:checked`);const ok=!!selected&&Number(selected.value)===d[2].findIndex(a=>a===d[1]);n+=+ok;mark(`d${i}f`,ok,d[1])});scores.decisions=n;document.getElementById('decisionFeedback').textContent=`${n} von ${decisions.length} richtig.`;updateTotal()}
+function checkDecisions(){let n=0;decisions.forEach((d,i)=>{const selected=document.querySelector(`input[name="d${i}"]:checked`);const ok=!!selected&&Number(selected.value)===d[3];n+=+ok;mark(`d${i}f`,ok,d[1])});scores.decisions=n;document.getElementById('decisionFeedback').textContent=`${n} von ${decisions.length} richtig.`;updateTotal()}
 function updateTotal(){const done=Object.keys(scores).length;if(done===0)return;const total=Object.values(scores).reduce((a,b)=>a+b,0);const max=Object.keys(scores).reduce((a,k)=>a+({personal:6,fachlich:3,'abwägen':10,business:14,stellen:7,decisions:4}[k]||0),0);document.getElementById('total').textContent=`Zwischenstand: ${total} von ${max} geprüften Aufgaben richtig. Bearbeitete Stationen: ${done} von 6. Du kannst Antworten verbessern und erneut prüfen.`}
 render();
 </script>
