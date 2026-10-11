@@ -17,6 +17,7 @@ main{padding:22px 18px 42px}.panel,.station{background:white;border:1px solid #e
 <section class="panel score" aria-live="polite"><h2>Dein Lernstand</h2><div id="scoreText">Starte die Stationen und prüfe deine Antworten.</div><button type="button" class="secondary" onclick="location.reload()">Übungen zurücksetzen</button></section></main>
 <footer>Fiktives Modellunternehmen MG Büromöbel AG · <a href="./gruenden-teil2.html">Zur Übersicht</a> · <a href="./">Zu allen Lernaufgaben</a></footer>
 <script>
+const scores={};
 const steps=[
 {q:'1 · Gründungsstart: Braucht Mira für das Einzelunternehmen einen Gesellschaftsvertrag oder gesetzliches Mindestkapital?',o:['Ja, beides ist vorgeschrieben.','Nein. Für das Einzelunternehmen gibt es grundsätzlich keine besondere Vertragsform und kein gesetzliches Mindestkapital.','Sie braucht mindestens 25.000 € Stammkapital.'],a:1,why:'Richtig: Ein Einzelunternehmen wird von einer Person gegründet. Ein gesetzliches Mindestkapital wie bei einer GmbH ist nicht vorgesehen.'},
 {q:'2 · Mira führt das Geschäft allein. Wer entscheidet und wem gehört der Gewinn?',o:['Mira entscheidet allein und der Gewinn gehört ihr.','Die Bank entscheidet, weil sie einen Kredit gibt.','Der Gewinn muss mit der MG Büromöbel AG geteilt werden.'],a:0,why:'Richtig: Die Inhaberin führt das Unternehmen und erhält den gesamten Gewinn. Sie trägt aber auch den gesamten Verlust.'},
