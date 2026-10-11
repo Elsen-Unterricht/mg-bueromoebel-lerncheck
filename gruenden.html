@@ -82,7 +82,7 @@ function render(){
  document.getElementById('fachlich').innerHTML='<h3>Fachliche Voraussetzungen</h3>'+fachlich.map((p,i)=>selectRow(p[0],fachlich.map(x=>x[1]),'f'+i)).join('');
  document.getElementById('abwägen').innerHTML=abwaegen.map((p,i)=>selectRow(p[0],['Vorteil','Nachteil','Chance','Risiko'],'a'+i)).join('');
  document.getElementById('business').innerHTML=business.map((p,i)=>selectRow(p[0],terms,'b'+i)).join('');
- document.getElementById('stellen').innerHTML=stellen.map((p,i)=>selectRow(p[0],['Ja','Nein'],'s'+i)).join('');
+ document.getElementById('stellen').innerHTML=stellen.map((p,i)=>selectRow(p[0],['Ja','Nein'],'st'+i)).join('');
  document.getElementById('entscheidungen').innerHTML='<h3>Was sollte Mira tun?</h3>'+decisions.map((p,i)=>`<fieldset class="q"><legend class="prompt">${i+1}. ${p[0]}</legend>${p[2].map((answer,j)=>`<label class="choice"><input type="radio" name="d${i}" value="${j}"> ${answer}</label>`).join('')}<div id="d${i}f" class="hint"></div></fieldset>`).join('');
 }
 function mark(id,ok,solution){document.getElementById(id).innerHTML=ok?'<span class="correct">✓ Richtig</span>':`<span class="wrong">✗ Noch einmal überlegen.</span> Lösung: ${solution}`}
@@ -91,7 +91,7 @@ function checkPersonal(){checkSelectGroup(personal,'p','personal','personalFeedb
 function checkFachlich(){checkSelectGroup(fachlich,'f','fachlich','fachlichFeedback')}
 function checkAbwaegen(){checkSelectGroup(abwaegen,'a','abwägen','abwFeedback')}
 function checkBusiness(){checkSelectGroup(business,'b','business','businessFeedback')}
-function checkStellen(){checkSelectGroup(stellen,'s','stellen','stellenFeedback')}
+function checkStellen(){checkSelectGroup(stellen,'st','stellen','stellenFeedback')}
 function checkDecisions(){let n=0;decisions.forEach((d,i)=>{const selected=document.querySelector(`input[name="d${i}"]:checked`);const ok=!!selected&&Number(selected.value)===d[2].findIndex(a=>a===d[1]);n+=+ok;mark(`d${i}f`,ok,d[1])});scores.decisions=n;document.getElementById('decisionFeedback').textContent=`${n} von ${decisions.length} richtig.`;updateTotal()}
 function updateTotal(){const done=Object.keys(scores).length;if(done===0)return;const total=Object.values(scores).reduce((a,b)=>a+b,0);const max=Object.keys(scores).reduce((a,k)=>a+({personal:6,fachlich:3,'abwägen':10,business:14,stellen:7,decisions:4}[k]||0),0);document.getElementById('total').textContent=`Zwischenstand: ${total} von ${max} geprüften Aufgaben richtig. Bearbeitete Stationen: ${done} von 6. Du kannst Antworten verbessern und erneut prüfen.`}
 render();
