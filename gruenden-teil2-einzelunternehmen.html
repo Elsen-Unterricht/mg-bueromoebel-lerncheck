@@ -25,7 +25,7 @@ const steps=[
 {q:'5 · Mira erwartet im ersten Jahr 64.000 € Gewinn. Welche Empfehlung wägt die Lage am besten ab?',o:['Gründen, denn ein geplanter Gewinn schließt jedes Risiko aus.','Nicht gründen, denn Selbstständigkeit ist immer zu riskant.','Gewinnchance und alleinige Entscheidung gegen das Haftungsrisiko abwägen und die Finanzierung sorgfältig prüfen.'],a:2,why:'Richtig: Eine gute Einschätzung berücksichtigt sowohl die Vorteile als auch die mögliche private Haftung und den Kredit.'}
 ];
 let current=0, points=0;
-function startSim(){current=0;points=0;showStep()}
+function startSim(){current=0;points=0;delete scores['Entscheidungssimulation'];document.getElementById('scoreText').textContent='Starte die Stationen und prüfe deine Antworten.';showStep()}
 function showStep(){
 const el=document.getElementById('sim');
 if(current>=steps.length){el.innerHTML='<h3>Simulation abgeschlossen</h3><p>Du hast '+points+' von '+steps.length+' Entscheidungen richtig getroffen.</p><p>Merke: Mira entscheidet allein und erhält den Gewinn. Sie trägt aber auch Verluste und haftet mit Geschäfts- und Privatvermögen.</p>';document.getElementById('simProgress').textContent='Abgeschlossen';scores['Entscheidungssimulation']=points;refresh();return}
