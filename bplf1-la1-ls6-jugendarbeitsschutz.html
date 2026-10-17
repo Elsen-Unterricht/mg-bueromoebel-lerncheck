@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#167c78"><title>MG Büromöbel KG · BPLF1 · LA 1 · LS 6 Das Jugendarbeitsschutzgesetz anwenden · Digitale Selbsttests</title><style>
+:root{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#1b3042;background:#f1f5f7;--navy:#153b5a;--blue:#167c78;--line:#d8e2e8;--muted:#536b7d}*{box-sizing:border-box}body{margin:0;line-height:1.55}header{background:linear-gradient(120deg,#153b5a,#287d86);color:white;padding:30px 18px}.hero,main{max-width:900px;margin:auto}h1{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#c8e1e7;font-weight:700}header p{color:#edf5f7;margin:0}.badge{display:inline-block;margin-top:14px;border:1px solid #a5cbd0;border-radius:99px;padding:4px 11px;font-size:.86rem}main{padding:20px 16px 42px}.panel,.testcard,.question{background:white;border:1px solid #e0e8ed;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 4px 16px #153b5a0a}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.tabs a{display:inline-block;background:#e7f0f5;color:#174d6c;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:650}.tabs a.active{background:#167c78;color:white}.muted,.hint{color:var(--muted);font-size:.94rem}.question{box-shadow:none;padding:15px;margin:12px 0}.qhead{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}.qhead h3{margin:0;color:var(--navy);font-size:1.07rem}.pts{white-space:nowrap;font-size:.83rem;font-weight:700;color:#315d79;background:#eaf2f6;padding:3px 8px;border-radius:20px}.prompt{margin:8px 0 10px}label.choice{display:block;margin:7px 0;font-weight:400}input[type=radio]{accent-color:var(--blue);margin-right:7px}select,input[type=number]{display:block;width:100%;font:inherit;padding:9px 10px;border:1px solid #acbdc9;border-radius:8px;background:#fff;color:#1b3042}.row{margin:9px 0}.row label{display:block;font-weight:650;margin-bottom:4px}button{font:inherit;background:var(--blue);color:white;border:0;border-radius:8px;padding:9px 14px;margin:8px 7px 0 0;cursor:pointer;font-weight:650}button:hover{background:#12547d}.secondary{background:#657d8d}.feedback{margin-top:10px;min-height:1.3em}.good{color:#137347}.bad{color:#a2362b}.feedbackline{padding:3px 0}.result{background:#eef6f1;border-left:5px solid #27865b;padding:13px 15px;border-radius:8px}.qnav a{color:#15577d}footer{text-align:center;color:#627889;font-size:.9rem;padding:5px 16px 25px}@media(max-width:520px){main{padding-inline:11px}.panel{padding:15px}}
+</style></head>
+<body><header><div class="hero"><div class="eyebrow">MG Büromöbel KG · Berufsschule · BPLF1</div><h1>LA 1 · LS 6 Das Jugendarbeitsschutzgesetz anwenden</h1><p>Wiederhole zentrale Inhalte aus der Übungsaufgabe. Bearbeite einen Test, prüfe jede Antwort und lies bei Fehlern die Erklärung.</p><span class="badge" id="badge"></span></div></header>
+<main><section class="panel"><b>So arbeitest du:</b> Wähle einen der beiden Selbsttests und prüfe deine Antworten einzeln. Bei falschen Antworten erhältst du die richtige Lösung mit einer Begründung; bei Rechenaufgaben siehst du den Rechenweg. Nach dem Test zeigt die Seite deine Punkte und die Selbstkontrollnote nach dem BM-Notenschlüssel. Deine Antworten werden nicht gespeichert.</section>
+<nav id="tabs" class="tabs" aria-label="Selbsttests"></nav><section id="quiz" class="testcard"></section>
+<section class="panel"><h2>Gesamtauswertung</h2><p class="muted">Die Auswertung bezieht sich auf den ausgewählten Test.</p><div id="overall" class="result" aria-live="polite">Prüfe die Aufgaben, um dein Ergebnis zu sehen.</div><button class="secondary" type="button" id="reset">Test neu starten</button></section>
+<p><a href="./index.html">← Zur Startseite</a></p></main><footer>MG Büromöbel KG · BPLF1 · Interaktive Selbstkontrolle</footer><script>
+const DATA = {"lesson":"LA 1 · LS 6 Das Jugendarbeitsschutzgesetz anwenden","subtitle":"Wiederhole zentrale Inhalte aus der Übungsaufgabe. Bearbeite einen Test, prüfe jede Antwort und lies bei Fehlern die Erklärung.","tests":[{"id":"arbeitszeit","name":"Alter, Arbeitszeit und Berufsschule","topics":"Kind und Jugendliche · tägliche und wöchentliche Arbeitszeit · Berufsschule · Pausen","qs":[{"type":"match","title":"Wer ist wie geschützt?","prompt":"Ordne Alter und Regelung zu.","rows":[{"term":"Person unter 15 Jahren","answer":"Kind","explain":"Als Kind gilt, wer noch nicht 15 Jahre alt ist."},{"term":"Person von 15 bis unter 18 Jahren","answer":"Jugendliche oder Jugendlicher","explain":"Jugendliche sind 15, aber noch nicht 18 Jahre alt."},{"term":"Person ab 18 Jahren","answer":"Volljährig","explain":"Ab dem 18. Geburtstag greift für die Arbeitszeit grundsätzlich das Arbeitszeitgesetz."},{"term":"Jugendliche Auszubildende","answer":"Höchstens 8 Stunden täglich und 40 Stunden wöchentlich","explain":"Für Jugendliche gelten grundsätzlich höchstens acht Stunden täglich und 40 Stunden wöchentlich."}],"options":["Kind","Jugendliche oder Jugendlicher","Volljährig","Höchstens 8 Stunden täglich und 40 Stunden wöchentlich"],"pts":4},{"type":"mc","title":"Pausen für Jugendliche","prompt":"Paul ist 16 Jahre alt und arbeitet an einem Tag 7,5 Stunden. Wie viel Pause braucht er insgesamt mindestens?","options":["30 Minuten","45 Minuten","60 Minuten"],"answer":"60 Minuten","explain":"Bei mehr als sechs Stunden Arbeit benötigen Jugendliche insgesamt mindestens 60 Minuten Pause.","pts":2},{"type":"mc","title":"Langer Berufsschultag","prompt":"Paul hat an einem Tag sechs Unterrichtsstunden zu je 45 Minuten. Was gilt für die Arbeit danach?","options":["Er muss danach noch in den Betrieb.","Der Tag wird einmal wöchentlich mit der durchschnittlichen täglichen Arbeitszeit angerechnet; danach darf er nicht beschäftigt werden.","Es wird nur die Unterrichtszeit angerechnet."],"answer":"Der Tag wird einmal wöchentlich mit der durchschnittlichen täglichen Arbeitszeit angerechnet; danach darf er nicht beschäftigt werden.","explain":"Ein Berufsschultag mit mehr als fünf Unterrichtsstunden gilt einmal in der Woche als langer Berufsschultag.","pts":2},{"type":"mc","title":"Maximale Wochenarbeitszeit","prompt":"Wie viele Stunden pro Woche dürfen Jugendliche grundsätzlich höchstens arbeiten?","options":["35 Stunden","40 Stunden","48 Stunden"],"answer":"40 Stunden","explain":"Das Jugendarbeitsschutzgesetz begrenzt die wöchentliche Arbeitszeit grundsätzlich auf 40 Stunden.","pts":2}]},{"id":"urlaub_schutz","name":"Urlaub und weitere Schutzregeln","topics":"Mindesturlaub nach Alter · Berufsschulurlaub · Ruhezeit · Praktikum","qs":[{"type":"match","title":"Mindesturlaub nach Alter","prompt":"Ordne der Altersgruppe die Mindestzahl an Werktagen zu. Maßgeblich ist das Alter am 1. Januar.","rows":[{"term":"Noch nicht 16 Jahre alt","answer":"30 Werktage","explain":"Jugendliche unter 16 Jahren erhalten mindestens 30 Werktage Urlaub."},{"term":"Noch nicht 17 Jahre alt","answer":"27 Werktage","explain":"Jugendliche unter 17 Jahren erhalten mindestens 27 Werktage Urlaub."},{"term":"Noch nicht 18 Jahre alt","answer":"25 Werktage","explain":"Jugendliche unter 18 Jahren erhalten mindestens 25 Werktage Urlaub."},{"term":"Volljährig","answer":"Mindestens 24 Werktage nach BUrlG","explain":"Für Volljährige gilt der Mindesturlaub des Bundesurlaubsgesetzes von 24 Werktagen."}],"options":["30 Werktage","27 Werktage","25 Werktage","Mindestens 24 Werktage nach BUrlG"],"pts":4},{"type":"num","title":"Urlaubstage trotz Berufsschule","prompt":"Paul nimmt an zehn Arbeitstagen Urlaub. An vier dieser Tage besucht er die Berufsschule. Der Vertrag gewährt 30 Arbeitstage. Wie viele Urlaubstage werden angerechnet?","answer":6,"unit":"Urlaubstage","explain":"Die Berufsschultage, an denen Paul Unterricht besucht, werden nicht als Urlaubstage angerechnet: 10 − 4 = 6 Urlaubstage.","pts":2,"tolerance":0.01},{"type":"mc","title":"Schulpraktikum einer 14-Jährigen","prompt":"Darf Lena während eines zweiwöchigen Schulpraktikums im Betrieb mitarbeiten?","options":["Nein, es gibt keinerlei Ausnahme.","Ja, ein Betriebspraktikum während der Schulzeit ist ausnahmsweise erlaubt.","Nur wenn sie nachts arbeitet."],"answer":"Ja, ein Betriebspraktikum während der Schulzeit ist ausnahmsweise erlaubt.","explain":"Für Kinder gilt grundsätzlich ein Beschäftigungsverbot. Das Betriebspraktikum während der Schulzeit ist eine erlaubte Ausnahme.","pts":2},{"type":"mc","title":"Ruhezeit zwischen Arbeitstagen","prompt":"Wie viel ununterbrochene Freizeit muss Jugendlichen zwischen zwei Arbeitstagen grundsätzlich bleiben?","options":["Mindestens 10 Stunden","Mindestens 11 Stunden","Mindestens 12 Stunden"],"answer":"Mindestens 12 Stunden","explain":"Jugendliche müssen grundsätzlich mindestens zwölf Stunden ununterbrochene Freizeit haben.","pts":2}]}],"grades":[[0,6],[25,5.3],[31,5],[44,4.7],[50,4.3],[53,4],[61,3.7],[64,3.3],[67,3],[74,2.7],[77,2.3],[80,2],[87,1.7],[90,1.3],[93,1]]};
+const params = new URLSearchParams(location.search);
+let active = params.get('teil') || DATA.tests[0].id;
+let test = DATA.tests.find(t => t.id === active) || DATA.tests[0];
+const checked = {};
+const esc = s => String(s).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));
+const fmt = n => Number(n).toLocaleString('de-DE');
+function points(q){return q.pts;}
+function render(){
+  const total = test.qs.reduce((s,q)=>s+q.pts,0);
+  document.getElementById('badge').textContent = test.qs.length + ' Aufgaben · ' + total + ' Punkte · BM-Notenschlüssel';
+  document.getElementById('tabs').innerHTML = DATA.tests.map((t,i) =>
+    '<a class=\"'+(t.id===test.id?'active':'')+'\" href=\"?teil='+encodeURIComponent(t.id)+'\">Test '+(i+1)+': '+esc(t.name)+'</a>').join('');
+  document.getElementById('quiz').innerHTML = '<h2>Test: '+esc(test.name)+'</h2><p class=\"muted\">Themen: '+esc(test.topics)+'</p>'+test.qs.map(question).join('');
+  update();
+}
+function question(q,i){
+  let body = '';
+  if(q.type==='mc') body = q.options.map(o => '<label class=\"choice\"><input type=\"radio\" name=\"q'+i+'\" value=\"'+esc(o)+'\"> '+esc(o)+'</label>').join('');
+  if(q.type==='num') body = '<label for=\"q'+i+'\">Dein Ergebnis ('+esc(q.unit)+')</label><input type=\"number\" id=\"q'+i+'\" step=\"any\" inputmode=\"decimal\">';
+  if(q.type==='select') body = '<label for=\"q'+i+'\">Wähle die passende Antwort</label><select id=\"q'+i+'\"><option value=\"\">Bitte auswählen</option>'+q.options.map(o=>'<option value=\"'+esc(o)+'\">'+esc(o)+'</option>').join('')+'</select>';
+  if(q.type==='match') body = q.rows.map((r,j)=>'<div class=\"row\"><label for=\"q'+i+'_'+j+'\">'+esc(r.term)+'</label><select id=\"q'+i+'_'+j+'\"><option value=\"\">Bitte zuordnen</option>'+q.options.map(o=>'<option value=\"'+esc(o)+'\">'+esc(o)+'</option>').join('')+'</select></div>').join('');
+  return '<article class=\"question\" id=\"card'+i+'\"><div class=\"qhead\"><h3>'+(i+1)+'. '+esc(q.title)+'</h3><span class=\"pts\">'+q.pts+' '+(q.pts===1?'Punkt':'Punkte')+'</span></div><p class=\"prompt\">'+esc(q.prompt)+'</p>'+body+'<button type=\"button\" onclick=\"check('+i+')\">Antwort prüfen</button><div class=\"feedback\" id=\"fb'+i+'\" aria-live=\"polite\"></div></article>';
+}
+function radio(i){return document.querySelector('input[name=\"q'+i+'\"]:checked')?.value||'';}
+function numVal(id){const s=document.getElementById(id)?.value??'';return s.trim()===''?null:Number(s.replace(',','.'));}
+function check(i){
+  const q=test.qs[i]; let score=0, lines=[]; let missing=false;
+  const yes=(label,answer,why)=>lines.push('<div class=\"feedbackline good\">✓ '+esc(label)+': <b>'+esc(answer)+'</b><br><span class=\"hint\">'+esc(why)+'</span></div>');
+  const no=(label,answer,why)=>lines.push('<div class=\"feedbackline bad\">✗ '+esc(label)+'<br><b>Richtige Lösung:</b> '+esc(answer)+'<br><span class=\"hint\">'+esc(why)+'</span></div>');
+  if(q.type==='mc'){
+    const a=radio(i); if(!a) missing=true;
+    else if(a===q.answer){score=q.pts;yes('Richtig',q.answer,q.explain);}
+    else no('Deine Antwort: '+a,q.answer,q.explain);
+  } else if(q.type==='select'){
+    const a=document.getElementById('q'+i).value; if(!a) missing=true;
+    else if(a===q.answer){score=q.pts;yes('Richtig',q.answer,q.explain);}
+    else no('Deine Antwort: '+a,q.answer,q.explain);
+  } else if(q.type==='num'){
+    const a=numVal('q'+i); if(a===null||Number.isNaN(a)) missing=true;
+    else if(Math.abs(a-q.answer)<=(q.tolerance??0.011)){score=q.pts;yes('Richtig',fmt(q.answer)+' '+q.unit,q.explain);}
+    else no('Dein Ergebnis: '+fmt(a)+' '+q.unit,fmt(q.answer)+' '+q.unit,q.explain);
+  } else if(q.type==='match'){
+    q.rows.forEach((r,j)=>{
+      const a=document.getElementById('q'+i+'_'+j).value;
+      if(!a){missing=true;return;}
+      if(a===r.answer){score++;yes(r.term,r.answer,r.explain);}
+      else no(r.term+': '+a,r.answer,r.explain);
+    });
+  }
+  if(missing){document.getElementById('fb'+i).innerHTML='<span class=\"bad\">Bitte fülle alle Felder aus oder wähle eine Antwort.</span>';return;}
+  checked[i]=score;
+  document.getElementById('fb'+i).innerHTML=lines.join('')+'<div class=\"hint\">'+(q.pts-score)+' von '+q.pts+' Punkten noch offen.</div>';
+  update();
+}
+function update(){
+  const max=test.qs.reduce((s,q)=>s+q.pts,0);
+  const done=Object.keys(checked).length;
+  const score=Object.values(checked).reduce((a,b)=>a+b,0);
+  const el=document.getElementById('overall');
+  if(done<test.qs.length){el.innerHTML=done+' von '+test.qs.length+' Aufgaben geprüft · bisher '+score+' von '+max+' Punkten.';return;}
+  const pct=score/max*100;
+  let grade=6;
+  DATA.grades.forEach(g=>{if(pct+1e-9>=g[0])grade=g[1];});
+  el.innerHTML='<b>'+score+' von '+max+' Punkten</b><br>'+pct.toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1})+' % · Selbstkontrollnote nach BM-Schlüssel: <b>'+String(grade).replace('.',',')+'</b>';
+}
+function reset(){
+  for(let i=0;i<test.qs.length;i++){
+    delete checked[i];
+    const fb=document.getElementById('fb'+i);if(fb)fb.innerHTML='';
+    document.querySelectorAll('#card'+i+' input').forEach(x=>{if(x.type==='radio')x.checked=false;else x.value='';});
+    document.querySelectorAll('#card'+i+' select').forEach(x=>x.value='');
+  }
+  update();window.scrollTo({top:0,behavior:'smooth'});
+}
+document.getElementById('reset').addEventListener('click',reset);
+render();
+</script></body></html>
