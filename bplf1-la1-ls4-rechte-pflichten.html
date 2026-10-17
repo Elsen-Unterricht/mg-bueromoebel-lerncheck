@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#167c78"><title>MG Büromöbel KG · BPLF1 · LA 1 · LS 4 Rechte und Pflichten in der Berufsausbildung · Digitale Selbsttests</title><style>
+:root{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#1b3042;background:#f1f5f7;--navy:#153b5a;--blue:#167c78;--line:#d8e2e8;--muted:#536b7d}*{box-sizing:border-box}body{margin:0;line-height:1.55}header{background:linear-gradient(120deg,#153b5a,#287d86);color:white;padding:30px 18px}.hero,main{max-width:900px;margin:auto}h1{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#c8e1e7;font-weight:700}header p{color:#edf5f7;margin:0}.badge{display:inline-block;margin-top:14px;border:1px solid #a5cbd0;border-radius:99px;padding:4px 11px;font-size:.86rem}main{padding:20px 16px 42px}.panel,.testcard,.question{background:white;border:1px solid #e0e8ed;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 4px 16px #153b5a0a}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.tabs a{display:inline-block;background:#e7f0f5;color:#174d6c;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:650}.tabs a.active{background:#167c78;color:white}.muted,.hint{color:var(--muted);font-size:.94rem}.question{box-shadow:none;padding:15px;margin:12px 0}.qhead{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}.qhead h3{margin:0;color:var(--navy);font-size:1.07rem}.pts{white-space:nowrap;font-size:.83rem;font-weight:700;color:#315d79;background:#eaf2f6;padding:3px 8px;border-radius:20px}.prompt{margin:8px 0 10px}label.choice{display:block;margin:7px 0;font-weight:400}input[type=radio]{accent-color:var(--blue);margin-right:7px}select,input[type=number]{display:block;width:100%;font:inherit;padding:9px 10px;border:1px solid #acbdc9;border-radius:8px;background:#fff;color:#1b3042}.row{margin:9px 0}.row label{display:block;font-weight:650;margin-bottom:4px}button{font:inherit;background:var(--blue);color:white;border:0;border-radius:8px;padding:9px 14px;margin:8px 7px 0 0;cursor:pointer;font-weight:650}button:hover{background:#12547d}.secondary{background:#657d8d}.feedback{margin-top:10px;min-height:1.3em}.good{color:#137347}.bad{color:#a2362b}.feedbackline{padding:3px 0}.result{background:#eef6f1;border-left:5px solid #27865b;padding:13px 15px;border-radius:8px}.qnav a{color:#15577d}footer{text-align:center;color:#627889;font-size:.9rem;padding:5px 16px 25px}@media(max-width:520px){main{padding-inline:11px}.panel{padding:15px}}
+</style></head>
+<body><header><div class="hero"><div class="eyebrow">MG Büromöbel KG · Berufsschule · BPLF1</div><h1>LA 1 · LS 4 Rechte und Pflichten in der Berufsausbildung</h1><p>Wiederhole zentrale Inhalte aus der Übungsaufgabe. Bearbeite einen Test, prüfe jede Antwort und lies bei Fehlern die Erklärung.</p><span class="badge" id="badge"></span></div></header>
+<main><section class="panel"><b>So arbeitest du:</b> Wähle einen der beiden Selbsttests und prüfe deine Antworten einzeln. Bei falschen Antworten erhältst du die richtige Lösung mit einer Begründung; bei Rechenaufgaben siehst du den Rechenweg. Nach dem Test zeigt die Seite deine Punkte und die Selbstkontrollnote nach dem BM-Notenschlüssel. Deine Antworten werden nicht gespeichert.</section>
+<nav id="tabs" class="tabs" aria-label="Selbsttests"></nav><section id="quiz" class="testcard"></section>
+<section class="panel"><h2>Gesamtauswertung</h2><p class="muted">Die Auswertung bezieht sich auf den ausgewählten Test.</p><div id="overall" class="result" aria-live="polite">Prüfe die Aufgaben, um dein Ergebnis zu sehen.</div><button class="secondary" type="button" id="reset">Test neu starten</button></section>
+<p><a href="./index.html">← Zur Startseite</a></p></main><footer>MG Büromöbel KG · BPLF1 · Interaktive Selbstkontrolle</footer><script>
+const DATA = {"lesson":"LA 1 · LS 4 Rechte und Pflichten in der Berufsausbildung","subtitle":"Wiederhole zentrale Inhalte aus der Übungsaufgabe. Bearbeite einen Test, prüfe jede Antwort und lies bei Fehlern die Erklärung.","tests":[{"id":"pflichten","name":"Pflichten auf beiden Seiten","topics":"Sorgfalt · Stillschweigen · Ausbildungsmittel · Fürsorge · Ausbildungsnachweis","qs":[{"type":"match","title":"Wer erfüllt welche Pflicht?","prompt":"Ordne das Beispiel der passenden Pflicht zu.","rows":[{"term":"Lara gibt Kundendaten nicht an Außenstehende weiter.","answer":"Auszubildende: Stillschweigen","explain":"Betriebs- und Geschäftsgeheimnisse müssen vertraulich behandelt werden."},{"term":"Der Betrieb stellt ein notwendiges Fachbuch kostenlos bereit.","answer":"Betrieb: Ausbildungsmittel stellen","explain":"Erforderliche Ausbildungsmittel stellt der Betrieb kostenlos zur Verfügung."},{"term":"Tobias führt den Ausbildungsnachweis sorgfältig.","answer":"Auszubildende: Ausbildungsnachweis führen","explain":"Auszubildende müssen den Nachweis führen und regelmäßig vorlegen."},{"term":"Der Ausbilder prüft den Nachweis regelmäßig.","answer":"Betrieb: Ausbildungsnachweis kontrollieren","explain":"Der Betrieb muss den Ausbildungsnachweis regelmäßig durchsehen."}],"options":["Auszubildende: Stillschweigen","Betrieb: Ausbildungsmittel stellen","Auszubildende: Ausbildungsnachweis führen","Betrieb: Ausbildungsnachweis kontrollieren"],"pts":4},{"type":"mc","title":"Vertretung oder Ausbildung?","prompt":"Tobias soll drei Wochen allein die ganze Werkhalle fegen, während die Gesellen Feierabend haben. Ist das in Ordnung?","options":["Ja, jede betriebliche Arbeit gehört zur Ausbildung.","Nein, die regelmäßige Alleinvertretung durch eine ausbildungsfremde Tätigkeit dient nicht dem Ausbildungszweck.","Ja, wenn es freitags ist."],"answer":"Nein, die regelmäßige Alleinvertretung durch eine ausbildungsfremde Tätigkeit dient nicht dem Ausbildungszweck.","explain":"Aufgaben müssen dem Ausbildungszweck dienen. Eine gelegentliche, passende Tätigkeit ist etwas anderes als regelmäßiger Ersatz für Arbeitskräfte.","pts":2},{"type":"mc","title":"Krankmeldung","prompt":"Lara wacht krank auf. Was muss sie zuerst tun?","options":["Den Betrieb unverzüglich informieren und die voraussichtliche Dauer mitteilen.","Erst nach drei Tagen Bescheid geben.","Nur den Ausbildungsnachweis anpassen."],"answer":"Den Betrieb unverzüglich informieren und die voraussichtliche Dauer mitteilen.","explain":"Die Krankmeldung muss unverzüglich erfolgen, im Regelfall vor Arbeitsbeginn. Die Bescheinigung ersetzt die Benachrichtigung nicht.","pts":2},{"type":"mc","title":"Qualifiziertes Zeugnis","prompt":"Daniel bittet um ein Zeugnis mit Beurteilung. Welche Inhalte gehören dazu?","options":["Art und Dauer der Ausbildung sowie Angaben zu Leistung und Verhalten.","Nur die Abschlussnote.","Krankheitstage und private Gründe."],"answer":"Art und Dauer der Ausbildung sowie Angaben zu Leistung und Verhalten.","explain":"Ein qualifiziertes Ausbildungszeugnis beschreibt Art, Dauer und Ziel der Ausbildung und beurteilt Leistung und Verhalten.","pts":2}]},{"id":"krankheit_arbeitszeit","name":"Krankheit, Arbeitszeit und Mehrarbeit","topics":"Arbeitsunfähigkeit · Entgeltfortzahlung · Überstunden · Abmahnung","qs":[{"type":"match","title":"Was gilt bei Krankheit?","prompt":"Ordne die Situation der passenden Regel zu.","rows":[{"term":"Arbeitsunfähigkeit dauert länger als drei Kalendertage","answer":"Nachweis spätestens am folgenden Arbeitstag","explain":"Im beschriebenen Fall muss die ärztliche Feststellung spätestens am folgenden Arbeitstag vorliegen; der Betrieb darf sie früher verlangen."},{"term":"Arbeitsunfähigkeit beginnt am 1. März","answer":"Bis zu sechs Wochen Entgeltfortzahlung","explain":"Bei erfüllten Voraussetzungen zahlt der Betrieb die Ausbildungsvergütung bis zu sechs Wochen weiter."},{"term":"Krankmeldung vor Arbeitsbeginn","answer":"Unverzüglich mit voraussichtlicher Dauer","explain":"Der Betrieb muss zeitnah erfahren, dass die Auszubildende ausfällt und wie lange die Arbeitsunfähigkeit voraussichtlich dauert."},{"term":"Mehrarbeit wird angeordnet","answer":"Besonders vergüten oder durch Freizeit ausgleichen","explain":"Überstunden sind besonders zu vergüten oder durch entsprechende Freizeit auszugleichen."}],"options":["Nachweis spätestens am folgenden Arbeitstag","Bis zu sechs Wochen Entgeltfortzahlung","Unverzüglich mit voraussichtlicher Dauer","Besonders vergüten oder durch Freizeit ausgleichen"],"pts":4},{"type":"num","title":"Ende der Entgeltfortzahlung","prompt":"Tobias wird ab Montag, 1. März 2027, arbeitsunfähig. Bis zu welchem Datum läuft die sechswöchige Entgeltfortzahlung?","answer":11,"unit":"April 2027","explain":"Sechs Wochen sind 42 Kalendertage. Der 1. März zählt als erster Tag, daher endet die Fortzahlung am 11. April 2027.","pts":2,"tolerance":0.01},{"type":"num","title":"Mehrarbeit in der Hausmessewoche","prompt":"Lara leistet in einer Woche 9 Stunden am Montag, 7,5 Stunden am Dienstag (Berufsschule), 9 Stunden am Mittwoch, 8 Stunden am Donnerstag und 7,5 Stunden am Freitag. Wie viel Mehrarbeit fällt gegenüber 7,5 Stunden pro Tag insgesamt an?","answer":3.5,"unit":"Stunden","explain":"Montag 1,5 + Mittwoch 1,5 + Donnerstag 0,5 Stunden. Der lange Berufsschultag zählt mit der durchschnittlichen Tageszeit. Summe: 3,5 Stunden.","pts":2,"tolerance":0.01},{"type":"mc","title":"Abmahnung","prompt":"Welche drei Elemente gehören in eine Abmahnung?","options":["Konkretes Fehlverhalten, Aufforderung zur Vertragstreue und Hinweis auf Folgen bei Wiederholung.","Nur die Überschrift und das Datum.","Eine sofortige Kündigung ohne Beschreibung des Verhaltens."],"answer":"Konkretes Fehlverhalten, Aufforderung zur Vertragstreue und Hinweis auf Folgen bei Wiederholung.","explain":"Eine wirksame Abmahnung beschreibt den konkreten Verstoß, fordert korrektes Verhalten und warnt vor möglichen Folgen bei Wiederholung.","pts":2}]}],"grades":[[0,6],[25,5.3],[31,5],[44,4.7],[50,4.3],[53,4],[61,3.7],[64,3.3],[67,3],[74,2.7],[77,2.3],[80,2],[87,1.7],[90,1.3],[93,1]]};
+const params = new URLSearchParams(location.search);
+let active = params.get('teil') || DATA.tests[0].id;
+let test = DATA.tests.find(t => t.id === active) || DATA.tests[0];
+const checked = {};
+const esc = s => String(s).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));
+const fmt = n => Number(n).toLocaleString('de-DE');
+function points(q){return q.pts;}
+function render(){
+  const total = test.qs.reduce((s,q)=>s+q.pts,0);
+  document.getElementById('badge').textContent = test.qs.length + ' Aufgaben · ' + total + ' Punkte · BM-Notenschlüssel';
+  document.getElementById('tabs').innerHTML = DATA.tests.map((t,i) =>
+    '<a class=\"'+(t.id===test.id?'active':'')+'\" href=\"?teil='+encodeURIComponent(t.id)+'\">Test '+(i+1)+': '+esc(t.name)+'</a>').join('');
+  document.getElementById('quiz').innerHTML = '<h2>Test: '+esc(test.name)+'</h2><p class=\"muted\">Themen: '+esc(test.topics)+'</p>'+test.qs.map(question).join('');
+  update();
+}
+function question(q,i){
+  let body = '';
+  if(q.type==='mc') body = q.options.map(o => '<label class=\"choice\"><input type=\"radio\" name=\"q'+i+'\" value=\"'+esc(o)+'\"> '+esc(o)+'</label>').join('');
+  if(q.type==='num') body = '<label for=\"q'+i+'\">Dein Ergebnis ('+esc(q.unit)+')</label><input type=\"number\" id=\"q'+i+'\" step=\"any\" inputmode=\"decimal\">';
+  if(q.type==='select') body = '<label for=\"q'+i+'\">Wähle die passende Antwort</label><select id=\"q'+i+'\"><option value=\"\">Bitte auswählen</option>'+q.options.map(o=>'<option value=\"'+esc(o)+'\">'+esc(o)+'</option>').join('')+'</select>';
+  if(q.type==='match') body = q.rows.map((r,j)=>'<div class=\"row\"><label for=\"q'+i+'_'+j+'\">'+esc(r.term)+'</label><select id=\"q'+i+'_'+j+'\"><option value=\"\">Bitte zuordnen</option>'+q.options.map(o=>'<option value=\"'+esc(o)+'\">'+esc(o)+'</option>').join('')+'</select></div>').join('');
+  return '<article class=\"question\" id=\"card'+i+'\"><div class=\"qhead\"><h3>'+(i+1)+'. '+esc(q.title)+'</h3><span class=\"pts\">'+q.pts+' '+(q.pts===1?'Punkt':'Punkte')+'</span></div><p class=\"prompt\">'+esc(q.prompt)+'</p>'+body+'<button type=\"button\" onclick=\"check('+i+')\">Antwort prüfen</button><div class=\"feedback\" id=\"fb'+i+'\" aria-live=\"polite\"></div></article>';
+}
+function radio(i){return document.querySelector('input[name=\"q'+i+'\"]:checked')?.value||'';}
+function numVal(id){const s=document.getElementById(id)?.value??'';return s.trim()===''?null:Number(s.replace(',','.'));}
+function check(i){
+  const q=test.qs[i]; let score=0, lines=[]; let missing=false;
+  const yes=(label,answer,why)=>lines.push('<div class=\"feedbackline good\">✓ '+esc(label)+': <b>'+esc(answer)+'</b><br><span class=\"hint\">'+esc(why)+'</span></div>');
+  const no=(label,answer,why)=>lines.push('<div class=\"feedbackline bad\">✗ '+esc(label)+'<br><b>Richtige Lösung:</b> '+esc(answer)+'<br><span class=\"hint\">'+esc(why)+'</span></div>');
+  if(q.type==='mc'){
+    const a=radio(i); if(!a) missing=true;
+    else if(a===q.answer){score=q.pts;yes('Richtig',q.answer,q.explain);}
+    else no('Deine Antwort: '+a,q.answer,q.explain);
+  } else if(q.type==='select'){
+    const a=document.getElementById('q'+i).value; if(!a) missing=true;
+    else if(a===q.answer){score=q.pts;yes('Richtig',q.answer,q.explain);}
+    else no('Deine Antwort: '+a,q.answer,q.explain);
+  } else if(q.type==='num'){
+    const a=numVal('q'+i); if(a===null||Number.isNaN(a)) missing=true;
+    else if(Math.abs(a-q.answer)<=(q.tolerance??0.011)){score=q.pts;yes('Richtig',fmt(q.answer)+' '+q.unit,q.explain);}
+    else no('Dein Ergebnis: '+fmt(a)+' '+q.unit,fmt(q.answer)+' '+q.unit,q.explain);
+  } else if(q.type==='match'){
+    q.rows.forEach((r,j)=>{
+      const a=document.getElementById('q'+i+'_'+j).value;
+      if(!a){missing=true;return;}
+      if(a===r.answer){score++;yes(r.term,r.answer,r.explain);}
+      else no(r.term+': '+a,r.answer,r.explain);
+    });
+  }
+  if(missing){document.getElementById('fb'+i).innerHTML='<span class=\"bad\">Bitte fülle alle Felder aus oder wähle eine Antwort.</span>';return;}
+  checked[i]=score;
+  document.getElementById('fb'+i).innerHTML=lines.join('')+'<div class=\"hint\">'+(q.pts-score)+' von '+q.pts+' Punkten noch offen.</div>';
+  update();
+}
+function update(){
+  const max=test.qs.reduce((s,q)=>s+q.pts,0);
+  const done=Object.keys(checked).length;
+  const score=Object.values(checked).reduce((a,b)=>a+b,0);
+  const el=document.getElementById('overall');
+  if(done<test.qs.length){el.innerHTML=done+' von '+test.qs.length+' Aufgaben geprüft · bisher '+score+' von '+max+' Punkten.';return;}
+  const pct=score/max*100;
+  let grade=6;
+  DATA.grades.forEach(g=>{if(pct+1e-9>=g[0])grade=g[1];});
+  el.innerHTML='<b>'+score+' von '+max+' Punkten</b><br>'+pct.toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1})+' % · Selbstkontrollnote nach BM-Schlüssel: <b>'+String(grade).replace('.',',')+'</b>';
+}
+function reset(){
+  for(let i=0;i<test.qs.length;i++){
+    delete checked[i];
+    const fb=document.getElementById('fb'+i);if(fb)fb.innerHTML='';
+    document.querySelectorAll('#card'+i+' input').forEach(x=>{if(x.type==='radio')x.checked=false;else x.value='';});
+    document.querySelectorAll('#card'+i+' select').forEach(x=>x.value='');
+  }
+  update();window.scrollTo({top:0,behavior:'smooth'});
+}
+document.getElementById('reset').addEventListener('click',reset);
+render();
+</script></body></html>
