@@ -12,7 +12,7 @@ const params = new URLSearchParams(location.search);
 let active = params.get('teil') || DATA.tests[0].id;
 let test = DATA.tests.find(t => t.id === active) || DATA.tests[0];
 const checked = {};
-const esc = s => String(s).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));
+const esc = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const fmt = n => Number(n).toLocaleString('de-DE');
 function points(q){return q.pts;}
 function render(){
