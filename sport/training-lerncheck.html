@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lernerfolgsüberprüfung – Selbsttest · So funktioniert Training</title>
+<style>
+:root{font-family:system-ui,Arial,sans-serif;color:#19344a;background:#edf4f6}
+*{box-sizing:border-box}body{margin:0;line-height:1.5}
+header{background:linear-gradient(115deg,#124b70,#16836b);color:#fff;padding:32px 20px}
+header div,main{max-width:850px;margin:auto}
+h1{margin:0;font-size:clamp(1.8rem,5vw,2.8rem)}
+main{padding:22px 16px 55px}
+.card{background:#fff;border:1px solid #d9e5e8;border-radius:15px;padding:20px;margin:15px 0;box-shadow:0 4px 14px #19344a0c}
+h2{margin:12px 0}
+.level{color:#fff;padding:12px 16px;border-radius:10px;margin-top:28px;background:#25825b}
+.level.l2{background:#ba8219}.level.l3{background:#af4252}
+.heading{display:flex;justify-content:space-between;gap:10px}
+.heading h3{font-size:1.13rem;margin:0 0 12px}
+.points{white-space:nowrap;font-weight:700;color:#477186}
+.opt{display:flex;gap:10px;align-items:center;border:1px solid #d4e0e5;border-radius:10px;padding:11px;margin:8px 0;cursor:pointer}
+.opt:has(input:checked){background:#eaf5f0;border-color:#1e8b68}
+.opt input{width:19px;height:19px;accent-color:#16866a;flex:none}
+button{font:inherit;font-weight:700;background:#146c8c;color:#fff;border:0;border-radius:10px;padding:14px 20px;cursor:pointer;margin:6px 6px 6px 0}
+button:disabled{opacity:.5;cursor:default}
+.solution{border-left:5px solid #197a5d;background:#eaf7ef;padding:11px;margin-top:12px}
+.solution.wrong{border-color:#bc4751;background:#fff0f0}
+.small{color:#587080;font-size:.93rem}
+.score{font-size:2rem;font-weight:800;color:#136d72;margin:10px 0 0}
+table{border-collapse:collapse}td,th{border-bottom:1px solid #d7e2e5;padding:5px 13px;text-align:left}
+.student-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.student-grid label{display:block;font-weight:700}
+.student-grid input{width:100%;font:inherit;padding:11px;border:1px solid #b7cbd5;border-radius:8px;margin-top:5px}
+.student-grid input:focus{outline:2px solid #157c75}
+#printSheet{display:none}
+@media(max-width:540px){.card{padding:14px}.student-grid{grid-template-columns:1fr}}
+@media print{
+ body>*:not(#printSheet){display:none!important}
+ #printSheet{display:block!important;max-width:180mm;margin:15mm auto;font:12pt Arial,sans-serif;color:#111}
+ #printSheet h1{font-size:20pt;border-bottom:2px solid #222;padding-bottom:10px}
+ #printSheet .print-result{font-size:18pt;font-weight:bold;padding:14px 0}
+ #printSheet table{width:100%;margin-top:14px}
+ #printSheet .print-foot{margin-top:30px;font-size:10pt;color:#555}
+}
+</style>
+</head>
+<body>
+<header><div>
+ <div>SPORT · DIGITALER LERNCHECK</div>
+ <h1>📈 Lernerfolgsüberprüfung – Selbsttest</h1>
+ <p>So funktioniert Training</p>
+ <p>3 Level · 12 Aufgaben · 24 Punkte</p>
+</div></header>
+<main>
+ <section class="card"><strong>Arbeitsauftrag</strong>
+  <p>Wähle bei jeder Frage <b>eine</b> Antwort. Erst nach der Abgabe siehst du Punkte, Note und die richtigen Lösungen.</p>
+  <p class="small">Die Auswertung passiert nur auf deinem Gerät. Es werden keine Daten gespeichert oder übertragen.</p>
+ </section>
+ <section class="card" id="student"><h2>Angaben für den Ergebnisbogen</h2>
+  <p class="small">Name und Klasse erscheinen nur auf deinem Ergebnisbogen (PDF). Sie werden nicht übertragen.</p>
+  <div class="student-grid">
+   <label for="studentName">Vor- und Nachname<input id="studentName" type="text" autocomplete="off" maxlength="100" placeholder="Vorname Nachname"></label>
+   <label for="studentClass">Klasse<input id="studentClass" type="text" autocomplete="off" maxlength="30" placeholder="z. B. HH26A"></label>
+  </div>
+ </section>
+ <div id="quiz"></div>
+ <section class="card" id="end">
+  <button id="submit">Test abgeben und bewerten</button>
+  <div id="result" aria-live="polite"></div>
+  <p class="small">Nach der Abgabe kannst du einen Ergebnisbogen drucken oder im Druckdialog „Als PDF speichern“ wählen.</p>
+  <details><summary>BWRE-Notenschlüssel (HH) anzeigen</summary><table id="keyTable"><tr><th>Ab %</th><th>Note</th><th>Dezimal</th></tr></table></details>
+ </section>
+</main>
+<div id="printSheet">
+ <h1>Ergebnisbogen · So funktioniert Training</h1>
+ <p><b>Name:</b> <span id="pName"></span><br><b>Klasse:</b> <span id="pClass"></span><br><b>Datum:</b> <span id="pDate"></span></p>
+ <div class="print-result" id="pResult"></div>
+ <table><thead><tr><th>Aufgabe</th><th>Erreicht</th><th>Maximal</th></tr></thead><tbody id="pRows"></tbody></table>
+ <p class="print-foot">Selbsttest „So funktioniert Training“ · Sport · BWRE-Notenschlüssel (HH) · Online-Lerncheck training</p>
+</div>
+<script>
+const Q = [
+[1,"Was ist ein Trainingsreiz?",["eine Belastung, die stark genug ist, damit sich der Körper anpasst","eine Pause","ein Sportgerät"],0,"Zu leichte Reize bewirken nichts."],
+[1,"Was passiert in der Erholung?",["Der Körper repariert sich und füllt die Energiespeicher auf.","Die Leistung sinkt immer weiter.","Nichts."],0,"In der Erholung passt sich der Körper an."],
+[1,"Wie heißt die Phase, in der man leistungsfähiger ist als vorher?",["Superkompensation","Ermüdung","Rückgang"],0,"Der Körper „baut vor“."],
+[1,"Was beschreibt die Häufigkeit?",["wie oft man pro Woche trainiert","wie schwer ein Gewicht ist","wie lang eine Pause ist"],0,"Zum Beispiel 3-mal pro Woche."],
+[2,"Was passiert bei zu kurzen Pausen?",["Die Leistung sinkt (Übertraining).","Die Leistung steigt schneller.","Nichts."],0,"Der Körper hat keine Zeit zur Erholung."],
+[2,"Was passiert bei zu langen Pausen?",["Die Leistung bleibt gleich.","Die Leistung steigt stark.","Man verletzt sich sofort."],0,"Der Trainingseffekt geht wieder verloren."],
+[2,"Welche Aussage passt zur langsamen Steigerung?",["Wird es leicht, steigere die Belastung ein wenig.","Trainiere immer gleich.","Steigere jedes Mal maximal."],0,"So bleibt der Trainingsreiz wirksam."],
+[2,"Intensität bedeutet …",["wie anstrengend eine Belastung ist","wie viele Tage man trainiert","wie viel man isst"],0,"Zum Beispiel Tempo oder Gewicht."],
+[3,"Warum gehören Schlaf und Pausen zum Training?",["In der Erholung passt sich der Körper an.","Weil Sport langweilig ist.","Damit man nicht zu schnell wird."],0,"Der Fortschritt entsteht nach dem Training."],
+[3,"Lea trainiert jeden Tag bis zur Erschöpfung und wird immer schlechter. Warum?",["Ihre Pausen sind zu kurz.","Sie trainiert zu wenig.","Sie trinkt zu viel Wasser."],0,"Das ist ein typisches Zeichen für Übertraining."],
+[3,"Welcher Plan ist für Ausdauer-Anfänger am besten?",["3-mal pro Woche 30 Minuten locker","einmal im Monat 3 Stunden","täglich 1 Stunde Vollgas"],0,"Regelmäßig, locker und mit Pausen."],
+[3,"Warum bringt ein einmaliges Training wenig?",["Ohne neuen Reiz geht die Leistung wieder zurück.","Man wird sofort Profi.","Muskeln brauchen keine Reize."],0,"Erst regelmäßige Reize führen zu Fortschritt."]
+];
+const G = [[96,"1+","0,7"],[91.5,"1","1,0"],[87,"1−","1,3"],[82,"2+","1,7"],[77.5,"2","2,0"],[73,"2−","2,3"],[69,"3+","2,7"],[64.5,"3","3,0"],[60,"3−","3,3"],[55,"4+","3,7"],[50,"4","4,0"],[45,"4−","4,3"],[37,"5+","4,7"],[29,"5","5,0"],[21,"5−","5,3"],[0,"6","6,0"]];
+const LEVELS = {1:"Level 1 · Grundlagen", 2:"Level 2 · Anwenden", 3:"Level 3 · Verstehen und begründen"};
+const PTS = 2;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+// Antworten mischen (Reihenfolge je Aufruf neu)
+const order = Q.map(q => { const a = q[2].map((_, i) => i); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; });
+let html = "", last = 0;
+Q.forEach((q, i) => {
+  if (q[0] !== last) { html += '<h2 class="level l' + q[0] + '">' + LEVELS[q[0]] + '</h2>'; last = q[0]; }
+  html += '<section class="card"><div class="heading"><h3>' + (i + 1) + '. ' + esc(q[1]) + '</h3><span class="points">' + PTS + ' Punkte</span></div>';
+  order[i].forEach(j => { html += '<label class="opt"><input type="radio" name="q' + i + '" value="' + j + '"><span>' + esc(q[2][j]) + '</span></label>'; });
+  html += '<div id="sol' + i + '" hidden></div></section>';
+});
+document.getElementById("quiz").innerHTML = html;
+const kt = document.getElementById("keyTable");
+[...G].reverse().forEach(g => { const tr = document.createElement("tr"); [g[0].toLocaleString("de-DE") + " %", g[1], g[2]].forEach(v => { const td = document.createElement("td"); td.textContent = v; tr.appendChild(td); }); kt.appendChild(tr); });
+
+document.getElementById("submit").onclick = () => {
+  const name = document.getElementById("studentName").value.trim();
+  const cls = document.getElementById("studentClass").value.trim();
+  if (!name || !cls) { alert("Bitte zuerst Vor- und Nachnamen sowie Klasse eintragen."); document.getElementById(!name ? "studentName" : "studentClass").focus(); return; }
+  const empty = Q.map((_, i) => document.querySelector('input[name="q' + i + '"]:checked') ? null : i + 1).filter(Boolean);
+  if (empty.length && !confirm("Nicht beantwortet: " + empty.join(", ") + ". Trotzdem abgeben?")) return;
+  let score = 0; const earned = [];
+  Q.forEach((q, i) => {
+    const v = document.querySelector('input[name="q' + i + '"]:checked');
+    const ok = !!v && Number(v.value) === q[3];
+    if (ok) score += PTS;
+    earned.push(ok ? PTS : 0);
+    const el = document.getElementById("sol" + i);
+    el.hidden = false; el.className = "solution" + (ok ? "" : " wrong");
+    el.textContent = (ok ? "Richtig, " + PTS + " Punkte. " : "0 Punkte. Richtige Antwort: " + q[2][q[3]] + ". ") + q[4];
+    document.querySelectorAll('input[name="q' + i + '"]').forEach(e => e.disabled = true);
+  });
+  const max = Q.length * PTS;
+  const pct = Math.round(score / max * 1000) / 10;
+  const grade = G.find(g => pct >= g[0]);
+  document.getElementById("result").innerHTML = '<p class="score">' + score + ' / ' + max + ' Punkte (' + pct.toLocaleString("de-DE") + ' %)</p><h2>Note: ' + grade[1] + ' · ' + grade[2] + '</h2><p>Die Lösungen stehen jetzt unter jeder Frage.</p>';
+  const pb = document.createElement("button"); pb.textContent = "Ergebnisbogen drucken / als PDF speichern"; pb.onclick = () => window.print();
+  const rb = document.createElement("button"); rb.textContent = "Neu starten"; rb.onclick = () => location.reload();
+  document.getElementById("result").append(pb, rb);
+  document.getElementById("pName").textContent = name;
+  document.getElementById("pClass").textContent = cls;
+  document.getElementById("pDate").textContent = new Date().toLocaleDateString("de-DE");
+  document.getElementById("pResult").textContent = score + " / " + max + " Punkte · " + pct.toLocaleString("de-DE") + " % · Note " + grade[1] + " (" + grade[2] + ")";
+  const rows = document.getElementById("pRows"); rows.innerHTML = "";
+  earned.forEach((p, i) => { const tr = document.createElement("tr"); [String(i + 1), String(p), String(PTS)].forEach(v => { const td = document.createElement("td"); td.textContent = v; tr.appendChild(td); }); rows.appendChild(tr); });
+  document.getElementById("studentName").disabled = true;
+  document.getElementById("studentClass").disabled = true;
+  document.getElementById("submit").disabled = true;
+  document.getElementById("end").scrollIntoView({behavior: "smooth"});
+};
+</script>
+</body>
+</html>
